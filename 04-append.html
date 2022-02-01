@@ -66,7 +66,7 @@
         "src",
         "https://images.unsplash.com/photo-1511044568932-338cba0ad803?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
       );
-      firstImage.setAttribute("alt", "Tabby cat");
+      firstImage.setAttribute("alt", "First cat");
       console.log(firstImage);
 
       const secondImage = document.querySelector("article:nth-child(2) img");
@@ -74,13 +74,13 @@
         "src",
         "https://images.unsplash.com/photo-1519052537078-e6302a4968d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
       );
-      secondImage.setAttribute("alt", "Another tabby cat");
+      secondImage.setAttribute("alt", "Second cat");
       console.log(secondImage);
 
       const newArticle = document.createElement("article");
       document.querySelector(".articles").appendChild(newArticle);
       newArticle.innerHTML =
-        '<img src="https://images.unsplash.com/photo-1596854307943-279e29c90c14?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Third tabby cat">' +
+        '<img src="https://images.unsplash.com/photo-1596854307943-279e29c90c14?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Third cat">' +
         "<h3>Article 3</h3>" +
         "<p>Cat</p>";
     </script>
