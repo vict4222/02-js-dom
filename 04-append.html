@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="html-struktur-style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Titel</h1>
+    <main>
+      <section>
+        <h2>Undertitel</h2>
+        <div class="articles">
+          <article>
+            <img src="https://placeimg.com/640/480/nature" alt="Sample image" />
+            <h3>Article 1</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+              rerum pariatur tempora sit voluptate non vel? Quas quam vero ipsam
+              sint dolor, at velit, magni nam suscipit illo dicta error, ab
+              fugiat odio expedita facere odit aperiam. Perspiciatis, eos a
+              itaque neque, sed repellendus asperiores eaque nobis nisi illo
+              tempora.
+            </p>
+          </article>
+          <article>
+            <img
+              src="https://placeimg.com/640/480/animals"
+              alt="Sample image"
+            />
+            <h3>Article 2</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Assumenda ut deserunt eaque eum ipsum id ratione molestias est
+              velit, voluptatibus quibusdam totam nesciunt minus et beatae nulla
+              repudiandae fugiat aliquam dolorum eligendi eos ullam quas
+              aspernatur! Animi itaque magnam asperiores fugit iure nostrum
+              ipsam culpa et inventore. Fugiat, asperiores placeat.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>This is the footer</p>
+    </footer>
+    <script>
+      const firstArticle = document.querySelector("main article:nth-child(1)");
+      console.log(firstArticle);
+
+      const secondArticle = document.querySelector("article + article");
+      console.log(secondArticle);
+
+      const firstArticleText = firstArticle.querySelector("p");
+      firstArticleText.textContent = "Hello world!";
+      console.log(firstArticleText);
+
+      const secondArticleText = secondArticle.querySelector("p");
+      secondArticleText.innerHTML = `<b> ${secondArticleText.innerHTML} </b>`;
+      console.log(secondArticleText);
+
+      const firstImage = document.querySelector("article:nth-child(1) img");
+      firstImage.setAttribute(
+        "src",
+        "https://images.unsplash.com/photo-1511044568932-338cba0ad803?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+      );
+      firstImage.setAttribute("alt", "Tabby cat");
+      console.log(firstImage);
+
+      const secondImage = document.querySelector("article:nth-child(2) img");
+      secondImage.setAttribute(
+        "src",
+        "https://images.unsplash.com/photo-1519052537078-e6302a4968d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+      );
+      secondImage.setAttribute("alt", "Another tabby cat");
+      console.log(secondImage);
+
+      const newArticle = document.createElement("article");
+      document.querySelector(".articles").appendChild(newArticle);
+      newArticle.innerHTML =
+        '<img src="https://images.unsplash.com/photo-1596854307943-279e29c90c14?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Third tabby cat">' +
+        "<h3>Article 3</h3>" +
+        "<p>Cat</p>";
+    </script>
+  </body>
+</html>
