@@ -86,6 +86,19 @@
           '<img src="https://images.unsplash.com/photo-1596854307943-279e29c90c14?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Third cat">' +
           "<h3>Article 3</h3>" +
           "<p>Cat</p>";
+
+        let randomX;
+        let randomY;
+
+        secondImage.addEventListener("click", () => {
+          randomX = 200 + Math.floor(Math.random() * 400);
+          randomY = 200 + Math.floor(Math.random() * 400);
+
+          secondImage.setAttribute(
+            "src",
+            `https://placekitten.com/${randomX}/${randomY}`
+          );
+        });
       });
     </script>
   </body>
