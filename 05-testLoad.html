@@ -91,8 +91,8 @@
         let randomY;
 
         secondImage.addEventListener("click", () => {
-          randomX = 200 + Math.floor(Math.random() * 400);
           randomY = 200 + Math.floor(Math.random() * 400);
+          randomX = randomY + Math.floor(Math.random() * 200);
 
           secondImage.setAttribute(
             "src",
