@@ -52,6 +52,14 @@
 
       const secondArticle = document.querySelector("article + article");
       console.log(secondArticle);
+
+      const firstArticleText = firstArticle.querySelector("p");
+      firstArticleText.textContent = "Hello world!";
+      console.log(firstArticleText);
+
+      const secondArticleText = secondArticle.querySelector("p");
+      secondArticleText.innerHTML = `<b> ${secondArticleText.innerHTML} </b>`;
+      console.log(secondArticleText);
     </script>
   </body>
 </html>
